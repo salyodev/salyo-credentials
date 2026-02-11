@@ -129,8 +129,7 @@ const PROJECTS = [
 ]
 
 const Presentation = () => (
-  // <Deck template={() => <DefaultTemplate />}>
-  <Deck theme={theme}>
+  <Deck theme={theme} template={() => <DefaultTemplate />}>
     <SlideBase>
       <div
         style={{
