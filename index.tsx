@@ -38,34 +38,51 @@ const PROJECTS = [
   {
     name: 'BRUTUS',
     sector: 'Alimentación',
-    description: ['Marca de cerveza', 'Parte del grupo Mahou San Miguel'],
-    work: [],
+    description: [
+      'Brutus | Marca de cerveza (Grupo Mahou San Miguel)',
+      'Una firma de culto con el respaldo de Mahou San Miguel que desafía los códigos del sector, proyectando una identidad visual sofisticada más propia de una marca de moda que de una cervecera convencional.',
+    ],
+    work: [
+      'A partir de un diseño entregado, nos encargamos de la programación y la integración de contenido audiovisual buscando un acabado limpio y profesional. Actualmente seguimos colaborando con ellos, realizando el mantenimiento técnico y las actualizaciones de contenido a medida que la marca necesita.',
+    ],
     image: '/brutus.png',
     url: 'https://brutusthebeer.com',
   },
   {
     name: 'ENGI-ON',
     sector: 'Ingeniería y automatización',
-    description: ['Especializada en ingeniería y automatización de procesos'],
-    work: ['Nueva página → Diseño moderno'],
+    description: [
+      'ENGI-ON | Ingeniería y automatización de procesos',
+      'Una consultoría técnica de referencia que transforma la eficiencia industrial mediante soluciones avanzadas de ingeniería, automatización y optimización de procesos complejos.',
+    ],
+    work: [
+      'Programamos su nueva plataforma digital para reconceptualizar su imagen clásica hacia una estética moderna, sofisticada y acorde a los tiempos actuales. Nos centramos en una ejecución técnica impecable que no solo hace la web más atractiva, sino que la convierte en una herramienta mucho más competitiva dentro de su sector.',
+    ],
     image: '/engi-on.png',
     url: 'https://engi-on.com',
   },
   {
-    name: 'NAPALM',
+    name: 'NAPALM RENTALS',
     sector: 'Material Audiovisual',
-    description: ['Alquiler de material audiovisual'],
-    work: ['Re-implementar la página', 'Migración de 1000+ productos'],
+    description: [
+      'Napalm Rentals | Alquiler de material audiovisual',
+      'Empresa de referencia en Barcelona para el alquiler de equipos de cámara e iluminación, reconocida por su solvencia técnica y su amplio catálogo para producciones profesionales.',
+    ],
+    work: [
+      'Reconceptualizamos y programamos íntegramente su plataforma para solucionar los problemas de sostenibilidad que presentaba su sistema anterior al escalar. Llevamos a cabo la migración crítica de más de 1.000 productos, optimizando drásticamente la velocidad de carga y el sistema de búsqueda. El resultado es una herramienta profesional, robusta y fácil de gestionar que permite a Napalm Rentals operar con una eficiencia competitiva a la altura de su volumen de negocio.',
+    ],
     image: '/napalm.png',
     url: 'https://napalmrentals.com',
   },
   {
     name: 'INSTITUCIÓ INTERNACIONAL',
     sector: 'Educación',
-    description: [],
+    description: [
+      'Institució Internacional | Programas y movilidad académica',
+      'Institución de prestigio dedicada a la gestión de redes académicas y movilidad global para estudiantes y profesionales.',
+    ],
     work: [
-      'Nueva página unificando destinos',
-      'Mapa interactivo con los destinos',
+      'Programamos una plataforma unificada para centralizar y ordenar toda su oferta internacional. Desarrollamos un buscador avanzado con mapa interactivo y filtros por escuela, género y localización, permitiendo al usuario encontrar su programa ideal de forma visual, rápida y clara.',
     ],
     image: '/international-program.png',
     url: 'https://instituciointernacional.org',
@@ -73,24 +90,39 @@ const PROJECTS = [
   {
     name: 'THEMOFF',
     sector: 'Audiovisual',
-    description: ['Productora Audiovisual'],
-    work: ['Nueva página'],
+    description: [
+      'Themoff | Productora Audiovisual',
+      'Productora audiovisual con base en Barcelona, especializada en crear contenido de impacto y narrativas con una identidad visual propia.',
+    ],
+    work: [
+      'Programamos una plataforma a medida para centralizar su portfolio sin depender de reproductores externos, logrando un display de vídeo rápido y fluido. Además, desarrollamos una landing page optimizada para la captación de leads y conversión de negocio.',
+    ],
     image: '/themoff.png',
     url: 'https://themoff.es',
   },
   {
     name: 'ORRI',
-    sector: 'Immobiliaria',
-    description: ['Immobiliaria en Barcelona'],
-    work: ['Nueva página', 'A la altura de los clientes'],
+    sector: 'Inmobiliaria',
+    description: [
+      'Orri | Inmobiliària en Barcelona',
+      'Inmobiliaria familiar de referencia que combina un servicio de alto standing con la confianza y cercanía necesarias para la gestión de inmuebles exclusivos en la ciudad.',
+    ],
+    work: [
+      'Programamos una nueva plataforma digital diseñada para diferenciar a la marca en un sector altamente competitivo. Realizamos la integración técnica con Inmovilla para sincronizar sus propiedades en tiempo real. También implementamos un sistema de newsletter automatizado para la fidelización de clientes. Actualmente, nos encargamos de su estrategia mensual de SEO para mantener su visibilidad y competitividad en el mercado.',
+    ],
     image: '/orri.png',
     url: 'https://orribarcelona.com',
   },
   {
     name: 'CASA PUIGARNAU',
     sector: 'Espacio Cultural',
-    description: ['Espacio cultural en Terrassa'],
-    work: ['Nueva página con todas las actividades y eventos'],
+    description: [
+      'Casa Puigarnau | Espacio Cultural',
+      'Referente cultural en Terrassa dedicado a la dinamización artística y social a través de una programación diversa de eventos y actividades.',
+    ],
+    work: [
+      'Creamos desde cero una identidad visual atractiva y programamos una plataforma a medida con un diseño 100% personalizado. Implementamos un CMS intuitivo que permite al propietario gestionar su agenda de eventos y actualizar contenidos de forma autónoma y sencilla. El resultado es un ecosistema digital dinámico y funcional que traslada la esencia del espacio físico al entorno online.',
+    ],
     image: '/casa_puigarnau.png',
     url: 'https://casapuigarnau.com',
   },
@@ -209,7 +241,14 @@ const Presentation = () => (
               width: '100%',
             }}
           >
-            <p style={{ ...bodyText, fontSize: '30px', fontWeight: 500, marginBottom: 24 }}>
+            <p
+              style={{
+                ...bodyText,
+                fontSize: '30px',
+                fontWeight: 500,
+                marginBottom: 24,
+              }}
+            >
               En Salyo, ayudamos a empresas y emprendedores a construir su
               presencia digital con criterio y{'\u00a0'}tecnología.
             </p>
@@ -449,7 +488,8 @@ const Presentation = () => (
                       whiteSpace: 'normal',
                     }}
                   >
-                    <strong style={{ fontWeight: 600 }}>{title}</strong>. {description}
+                    <strong style={{ fontWeight: 600 }}>{title}</strong>.{' '}
+                    {description}
                   </span>
                 </div>
               </div>
@@ -462,186 +502,111 @@ const Presentation = () => (
       <div
         style={{
           display: 'flex',
-          flexDirection: 'column',
+          flexDirection: 'row',
           width: '100%',
           flex: 1,
           minHeight: 0,
-          gap: 28,
         }}
       >
-        {/* Bloque arriba de Equipo */}
         <div
           style={{
+            flex: 1,
             display: 'flex',
-            flexDirection: 'row',
-            width: '100%',
-            flex: '0 0 auto',
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingRight: 24,
           }}
         >
-          <div style={{ flex: 1 }} />
+          <p
+            style={{
+              fontSize: '96px',
+              fontWeight: 300,
+              fontFamily: 'var(--font-geist)',
+              color: 'black',
+              paddingBottom: '4px',
+              margin: 0,
+              textAlign: 'center',
+            }}
+          >
+            Equipo y Colaboradores
+          </p>
+        </div>
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingLeft: 24,
+            paddingRight: 56,
+          }}
+        >
           <div
             style={{
-              flex: 1,
-              paddingLeft: 24,
-              paddingRight: 56,
               display: 'flex',
               flexDirection: 'column',
-              gap: 12,
-              minWidth: 0,
+              gap: 16,
+              maxWidth: '100%',
+              width: '100%',
             }}
           >
-            <p style={{ ...bodyText, fontSize: '26px', fontWeight: 500, margin: 0 }}> </p>
-            <p style={{ ...bodyText, fontSize: '17px', margin: 0 }}> </p>
-          </div>
-        </div>
-        {/* Equipo */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            width: '100%',
-            flex: 1,
-            minHeight: 0,
-          }}
-        >
-          <div
-            style={{
-              flex: 1,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              paddingRight: 24,
-            }}
-          >
+            <img
+              src="/myself.jpeg"
+              alt="Alan Douglas"
+              style={{
+                width: 'auto',
+                maxWidth: 200,
+                height: 'auto',
+                objectFit: 'cover',
+                borderRadius: 8,
+                display: 'block',
+              }}
+            />
             <p
               style={{
-                fontSize: '96px',
-                fontWeight: 300,
-                fontFamily: 'var(--font-geist)',
-                color: 'black',
-                paddingBottom: '4px',
+                ...bodyText,
+                fontSize: '17px',
+                lineHeight: 1.5,
                 margin: 0,
               }}
             >
-              Equipo
+              <strong style={{ fontWeight: 600 }}>
+                Alan Douglas:{' '}
+                <span style={{ color: 'var(--color-gray)', fontWeight: 500 }}>
+                  Fullstack Developer &amp; Project Manager.
+                </span>
+              </strong>{' '}
             </p>
-          </div>
-          <div
-            style={{
-              flex: 1,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              paddingLeft: 24,
-              paddingRight: 56,
-            }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 12,
-                maxWidth: '100%',
-                width: '100%',
-              }}
-            >
-              <p style={{ ...bodyText, fontSize: '17px', lineHeight: 1.5, margin: 0 }}>
-                <strong style={{ fontWeight: 600 }}>CEO Alan Douglas. Web Developer and Project Manager.</strong>{' '}
-                Como líder de Salyo, Alan coordina la arquitectura técnica y la
-                gestión de proyectos, asegurando que cada línea de código cumpla
-                con los estándares de calidad del estudio. Su enfoque combina la
-                precisión del desarrollo con una visión estratégica orientada a la
-                entrega de productos digitales sólidos y eficientes.
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* Partners */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            width: '100%',
-            flex: 1,
-            minHeight: 0,
-          }}
-        >
-          <div
-            style={{
-              flex: 1,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              paddingRight: 24,
-            }}
-          >
             <p
               style={{
-                fontSize: '96px',
-                fontWeight: 300,
-                fontFamily: 'var(--font-geist)',
-                color: 'black',
-                paddingBottom: '4px',
+                ...bodyText,
+                fontSize: '17px',
+                lineHeight: 1.5,
                 margin: 0,
               }}
             >
-              Partners
+              Como líder de Salyo, Alan coordina la arquitectura técnica y la
+              gestión de proyectos, asegurando que cada línea de código cumpla
+              con los estándares de calidad del estudio. Su enfoque combina la
+              precisión del desarrollo con una visión estratégica orientada a la
+              entrega de productos digitales sólidos y eficientes.
             </p>
-          </div>
-          <div
-            style={{
-              flex: 1,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              paddingLeft: 24,
-              paddingRight: 56,
-            }}
-          >
-            <div
+            <p
               style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 12,
-                maxWidth: '100%',
-                width: '100%',
+                ...bodyText,
+                fontSize: '17px',
+                lineHeight: 1.5,
+                margin: 0,
               }}
             >
-              <p style={{ ...bodyText, fontSize: '17px', lineHeight: 1.5, margin: 0 }}>
-                <strong style={{ fontWeight: 600 }}>
-                  Materia, Sauras Garriga, Vetado, Cortto, Atipus, Bualié Studio.
-                </strong>
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* Bloque abajo de Partners */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            width: '100%',
-            flex: '0 0 auto',
-          }}
-        >
-          <div style={{ flex: 1 }} />
-          <div
-            style={{
-              flex: 1,
-              paddingLeft: 24,
-              paddingRight: 56,
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 12,
-              minWidth: 0,
-            }}
-          >
-            <p style={{ ...bodyText, fontSize: '26px', fontWeight: 500, margin: 0 }}> </p>
-            <p style={{ ...bodyText, fontSize: '17px', margin: 0 }}> </p>
+              <strong style={{ fontWeight: 600 }}>Colaboradores:</strong>{' '}
+              Materia, SaurasGarriga, Vetado, Cortto, Atipus, Bualié Studio.
+            </p>
           </div>
         </div>
       </div>
     </ContentSlide>
+
     <SlideBase>
       <div
         style={{
@@ -933,6 +898,7 @@ const ProjectSlide = ({
       <div
         style={{
           flex: 1,
+          maxWidth: '48%',
           display: 'flex',
           flexDirection: 'column',
           gap: 24,
@@ -989,8 +955,8 @@ const ProjectSlide = ({
               <p
                 key={i}
                 style={{
-                  fontSize: '18px',
-                  fontWeight: '400',
+                  fontSize: '14px',
+                  fontWeight: i === 0 ? '600' : '300',
                   fontFamily: 'var(--font-roboto)',
                   color: 'black',
                   margin: 0,
@@ -1010,24 +976,22 @@ const ProjectSlide = ({
                 fontFamily: 'var(--font-roboto)',
                 color: 'black',
                 margin: 0,
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
               }}
             >
-              Trabajo realizado
+              El trabajo realizado
             </p>
             {work.map((w, i) => (
               <p
                 key={i}
                 style={{
-                  fontSize: '18px',
-                  fontWeight: '400',
+                  fontSize: '14px',
+                  fontWeight: '300',
                   fontFamily: 'var(--font-roboto)',
                   color: 'black',
                   margin: 0,
                 }}
               >
-                • {w}
+                {w}
               </p>
             ))}
           </div>
