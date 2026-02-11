@@ -1,0 +1,610 @@
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import { Deck, DefaultTemplate, Slide, FlexBox, Heading } from 'spectacle'
+import { motion } from 'motion/react'
+
+const theme = {
+  space: [0],
+}
+
+// Constants
+const EMAIL = 'alan@salyo.dev'
+const WEBSITE = 'https://salyo.dev'
+const YEAR = 2026
+
+const PROJECT_IMAGES_TOP = [
+  '/lexa.png',
+  '/pampam.png',
+  '/orri.png',
+  '/brutus.png',
+  '/engi-on.png',
+  '/themoff.png',
+  '/napalm.png',
+  '/international-program.png',
+]
+
+const PROJECT_IMAGES_BOTTOM = [
+  '/anecdota.png',
+  '/vetado.png',
+  '/casa_puigarnau.png',
+  '/laucusi.png',
+  '/sauras_garriga.png',
+  '/aladetres.png',
+  '/alberto-gross.png',
+  '/celix.png',
+]
+
+const PROJECTS = [
+  {
+    name: 'BRUTUS',
+    sector: 'Alimentación',
+    description: ['Marca de cerveza', 'Parte del grupo Mahou San Miguel'],
+    work: [],
+    image: '/brutus.png',
+    url: 'https://brutusthebeer.com',
+  },
+  {
+    name: 'ENGI-ON',
+    sector: 'Ingeniería y automatización',
+    description: ['Especializada en ingeniería y automatización de procesos'],
+    work: ['Nueva página → Diseño moderno'],
+    image: '/engi-on.png',
+    url: 'https://engi-on.com',
+  },
+  {
+    name: 'NAPALM',
+    sector: 'Material Audiovisual',
+    description: ['Alquiler de material audiovisual'],
+    work: ['Re-implementar la página', 'Migración de 1000+ productos'],
+    image: '/napalm.png',
+    url: 'https://napalmrentals.com',
+  },
+  {
+    name: 'INSTITUCIÓ INTERNACIONAL',
+    sector: 'Educación',
+    description: [],
+    work: [
+      'Nueva página unificando destinos',
+      'Mapa interactivo con los destinos',
+    ],
+    image: '/international-program.png',
+    url: 'https://instituciointernacional.org',
+  },
+  {
+    name: 'THEMOFF',
+    sector: 'Audiovisual',
+    description: ['Productora Audiovisual'],
+    work: ['Nueva página'],
+    image: '/themoff.png',
+    url: 'https://themoff.es',
+  },
+  {
+    name: 'ORRI',
+    sector: 'Immobiliaria',
+    description: ['Immobiliaria en Barcelona'],
+    work: ['Nueva página', 'A la altura de los clientes'],
+    image: '/orri.png',
+    url: 'https://orribarcelona.com',
+  },
+  {
+    name: 'CASA PUIGARNAU',
+    sector: 'Espacio Cultural',
+    description: ['Espacio cultural en Terrassa'],
+    work: ['Nueva página con todas las actividades y eventos'],
+    image: '/casa_puigarnau.png',
+    url: 'https://casapuigarnau.com',
+  },
+]
+
+const Presentation = () => (
+  // <Deck template={() => <DefaultTemplate />}>
+  <Deck theme={theme}>
+    <SlideBase>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 2,
+        }}
+      >
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          style={{
+            fontSize: '128px',
+            fontWeight: '300',
+            fontFamily: 'var(--font-geist)',
+            color: 'black',
+          }}
+        >
+          Salyo
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
+          style={{
+            fontSize: '24px',
+            fontWeight: '400',
+            fontFamily: 'var(--font-geist)',
+            color: 'var(--color-text)',
+            textTransform: 'uppercase',
+          }}
+        >
+          Your digital partner
+        </motion.p>
+      </div>
+    </SlideBase>
+    <ContentSlide title="SALYO" pageNumber={2}>
+      <p style={bulletLabel}>What we do</p>
+      <p style={subBullet}>—</p>
+      <p style={bulletLabel}>Why we do it</p>
+      <p style={subBullet}>—</p>
+      <p style={bulletLabel}>Goals</p>
+      <p style={subBullet}>—</p>
+    </ContentSlide>
+    <ContentSlide title="ABOUT US" pageNumber={3}>
+      <p style={bodyText}>Who we are, what we do, why.</p>
+      <p style={{ ...bodyText, marginTop: 16, fontWeight: 600, color: 'black' }}>“Your digital partner”</p>
+    </ContentSlide>
+    <ContentSlide title="ABOUT US — PRINCIPIOS (Para proyectos)" pageNumber={4}>
+      <p style={bulletLabel}>AI Proof</p>
+      <p style={subBullet}>All stays in code, that is easy to read for AI. Code AI is well trained on.</p>
+      <p style={bulletLabel}>Escalabilidad</p>
+      <p style={subBullet}>Proyectos sin límites.</p>
+      <p style={bulletLabel}>Customatización</p>
+      <p style={subBullet}>Nada de plantillas o restricciones.</p>
+      <p style={bulletLabel}>Tech focused</p>
+      <p style={subBullet}>We want to remain original, we don't design, we avoid patterns. We stay fresh.</p>
+    </ContentSlide>
+    <ContentSlide title="DESIGN COLLABS" pageNumber={5}>
+      <p style={bulletLabel}>How we work</p>
+      <p style={subBullet}>With designer companies.</p>
+      <p style={bodyText}>Materia, Sauras Garriga, Vetado, Cortto, Atipus, Bualié Studio</p>
+    </ContentSlide>
+    <ContentSlide title="SERVICIOS" pageNumber={6}>
+      <p style={bullet}>Desarrollo Web (Design collaborators)</p>
+      <p style={bullet}>SEO</p>
+      <p style={bullet}>Consultoría Digital</p>
+      <p style={bullet}>AI Partner</p>
+    </ContentSlide>
+    <ContentSlide title="OUR TECH" pageNumber={7}>
+      <p style={bulletLabel}>Stack</p>
+      <p style={subBullet}>Host + Framework + CMS + Analytics</p>
+      <p style={bulletLabel}>Infrastructure</p>
+      <p style={subBullet}>Scalable, Secure, Cheap</p>
+    </ContentSlide>
+    <ContentSlide title="TEAM" pageNumber={8}>
+      <p style={bulletLabel}>Alan (CV)</p>
+      <p style={subBullet}>Description</p>
+      <p style={subBullet}>Chronological career</p>
+    </ContentSlide>
+    <SlideBase>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100%',
+          gap: 64,
+          padding: '40px 48px',
+          boxSizing: 'border-box',
+        }}
+      >
+        <ProjectGrid images={PROJECT_IMAGES_TOP} fade="down" />
+        <p
+          style={{
+            fontSize: '82px',
+            fontWeight: '300',
+            fontFamily: 'var(--font-geist)',
+            color: 'black',
+            margin: 0,
+          }}
+        >
+          Proyectos
+        </p>
+        <ProjectGrid images={PROJECT_IMAGES_BOTTOM} fade="up" />
+      </div>
+      <Footer pageNumber={9} />
+    </SlideBase>
+    {PROJECTS.map((project, i) => (
+      <ProjectSlide key={project.name} pageNumber={10 + i} {...project} />
+    ))}
+    <SlideBase>
+      <Footer pageNumber={10 + PROJECTS.length} />
+    </SlideBase>
+  </Deck>
+)
+
+createRoot(document.getElementById('app')!).render(<Presentation />)
+
+// Content slide layout and typography
+const contentWrap = {
+  padding: '48px 56px 80px',
+  boxSizing: 'border-box' as const,
+  width: '100%',
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column' as const,
+  alignItems: 'flex-start',
+  justifyContent: 'flex-start',
+}
+const sectionTitle = {
+  fontSize: '32px',
+  fontWeight: 600 as const,
+  fontFamily: 'var(--font-geist)',
+  color: 'black',
+  margin: '0 0 24px 0',
+}
+const bodyText = {
+  fontSize: '20px',
+  fontWeight: 400 as const,
+  fontFamily: 'var(--font-geist)',
+  color: 'var(--color-text)',
+  margin: '0 0 12px 0',
+  lineHeight: 1.5,
+}
+const bullet = {
+  ...bodyText,
+  margin: '0 0 8px 0',
+}
+const subBullet = {
+  ...bodyText,
+  fontSize: '18px',
+  margin: '0 0 8px 24px',
+}
+const bulletLabel = {
+  fontSize: '18px',
+  fontWeight: 600 as const,
+  fontFamily: 'var(--font-geist)',
+  color: 'black',
+  margin: '0 0 4px 0',
+}
+
+const ContentSlide = ({
+  title,
+  children,
+  pageNumber,
+}: {
+  title: string
+  children: React.ReactNode
+  pageNumber: number
+}) => (
+  <SlideBase>
+    <div style={contentWrap}>
+      <h2 style={sectionTitle}>{title}</h2>
+      {children}
+    </div>
+    <Footer pageNumber={pageNumber} />
+  </SlideBase>
+)
+
+const Footer = ({ pageNumber }: { pageNumber: number }) => (
+  <div
+    style={{
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '0 36px 24px 36px',
+      boxSizing: 'border-box',
+      fontFamily: 'var(--font-geist)',
+      fontSize: '14px',
+      color: 'var(--color-text)',
+    }}
+  >
+    <span>{EMAIL}</span>
+    <span>{pageNumber}</span>
+    <span
+      style={{
+        fontSize: '20px',
+        fontWeight: '600',
+        color: 'black',
+      }}
+    >
+      {YEAR}
+    </span>
+  </div>
+)
+
+const SlideBase = ({ children }: { children: React.ReactNode }) => (
+  <Slide backgroundColor="white" padding={0}>
+    <div
+      style={{
+        position: 'relative',
+        height: '100%',
+        background:
+          'radial-gradient(circle at center, white 0%, rgba(59,130,246,0.6) 100%)',
+      }}
+    >
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'url(/noise.webp)',
+          backgroundSize: '100px 100px',
+          backgroundRepeat: 'repeat',
+          opacity: 0.4,
+          pointerEvents: 'none',
+        }}
+      />
+      <div
+        style={{
+          position: 'relative',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+          border: `0.5px solid var(--color-frame)`,
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  </Slide>
+)
+
+const ProjectSlide = ({
+  pageNumber,
+  name,
+  sector,
+  description,
+  work,
+  image,
+  url,
+}: {
+  pageNumber: number
+  name: string
+  sector: string
+  description: string[]
+  work: string[]
+  image?: string
+  url?: string
+}) => (
+  <SlideBase>
+    <div
+      style={{
+        display: 'flex',
+        width: '100%',
+        height: '100%',
+        padding: '60px 48px 60px 48px',
+        boxSizing: 'border-box',
+        gap: 40,
+        alignItems: 'center',
+      }}
+    >
+      {/* Left: Info */}
+      <div
+        style={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 24,
+        }}
+      >
+        <p
+          style={{
+            fontSize: '48px',
+            fontWeight: '600',
+            fontFamily: 'var(--font-geist)',
+            color: 'black',
+            margin: 0,
+          }}
+        >
+          {name}
+        </p>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
+          }}
+        >
+          <span
+            style={{
+              fontSize: '14px',
+              fontWeight: '500',
+              fontFamily: 'var(--font-geist)',
+              color: 'white',
+              backgroundColor: 'rgb(59,130,246)',
+              padding: '4px 12px',
+              borderRadius: 999,
+            }}
+          >
+            {sector}
+          </span>
+        </div>
+        {description.length > 0 && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            {/* <p
+              style={{
+                fontSize: '14px',
+                fontWeight: '600',
+                fontFamily: 'var(--font-geist)',
+                color: 'var(--color-text)',
+                margin: 0,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+              }}
+            >
+              Empresa
+            </p> */}
+            {description.map((d, i) => (
+              <p
+                key={i}
+                style={{
+                  fontSize: '18px',
+                  fontWeight: '400',
+                  fontFamily: 'var(--font-geist)',
+                  color: 'var(--color-text)',
+                  margin: 0,
+                }}
+              >
+                {d}
+              </p>
+            ))}
+          </div>
+        )}
+        {work.length > 0 && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <p
+              style={{
+                fontSize: '14px',
+                fontWeight: '600',
+                fontFamily: 'var(--font-geist)',
+                color: 'var(--color-text)',
+                margin: 0,
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+              }}
+            >
+              Trabajo realizado
+            </p>
+            {work.map((w, i) => (
+              <p
+                key={i}
+                style={{
+                  fontSize: '18px',
+                  fontWeight: '400',
+                  fontFamily: 'var(--font-geist)',
+                  color: 'var(--color-text)',
+                  margin: 0,
+                }}
+              >
+                • {w}
+              </p>
+            ))}
+          </div>
+        )}
+        {url && (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              fontSize: '14px',
+              fontWeight: '500',
+              fontFamily: 'var(--font-geist)',
+              color: 'rgb(59,130,246)',
+              textDecoration: 'none',
+              border: '1px solid rgb(59,130,246)',
+              padding: '8px 16px',
+              borderRadius: 999,
+              width: 'fit-content',
+            }}
+          >
+            Visitar web ↗
+          </a>
+        )}
+      </div>
+      {/* Right: Image */}
+      {image && <ProjectImage image={image} name={name} url={url} />}
+    </div>
+    <Footer pageNumber={pageNumber} />
+  </SlideBase>
+)
+
+const ProjectGrid = ({
+  images,
+  fade,
+}: {
+  images: string[]
+  fade?: 'up' | 'down'
+}) => {
+  const maskImage =
+    fade === 'down'
+      ? 'linear-gradient(to bottom, black 0%, transparent 100%)'
+      : fade === 'up'
+        ? 'linear-gradient(to top, black 0%, transparent 100%)'
+        : undefined
+
+  return (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 1fr)',
+        gridTemplateRows: 'repeat(2, 1fr)',
+        gap: 16,
+        width: '100%',
+        maskImage,
+        WebkitMaskImage: maskImage,
+      }}
+    >
+      {images.map((src, i) => (
+        <div
+          key={i}
+          style={{
+            overflow: 'hidden',
+            borderRadius: 6,
+            boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+          }}
+        >
+          <img
+            src={src}
+            alt=""
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              display: 'block',
+            }}
+          />
+        </div>
+      ))}
+    </div>
+  )
+}
+
+const ProjectImage = ({
+  image,
+  name,
+  url,
+}: {
+  image: string
+  name: string
+  url?: string
+}) => {
+  const img = (
+    <img
+      src={image}
+      alt={name}
+      className="project-image"
+      style={{
+        maxWidth: '100%',
+        maxHeight: '400px',
+        objectFit: 'contain',
+        borderRadius: 8,
+        boxShadow: '0 4px 24px rgba(0,0,0,0.10)',
+        transition: 'transform 0.2s ease',
+      }}
+    />
+  )
+  return (
+    <div
+      style={{
+        flex: 1,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      {url ? (
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          {img}
+        </a>
+      ) : (
+        img
+      )}
+    </div>
+  )
+}
