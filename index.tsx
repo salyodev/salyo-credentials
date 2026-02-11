@@ -159,55 +159,488 @@ const Presentation = () => (
       </div>
     </SlideBase>
     <ContentSlide pageNumber={2}>
-      <h2 style={sectionTitle}>Sobre Nosotros</h2>
-      <p style={bodyText}>
-        En Salyo, ayudamos a empresas y emprendedores a construir su presencia
-        digital con criterio y tecnología.
-      </p>
-      <p style={bodyText}>
-        Somos un estudio enfocado en crear soluciones que funcionan. Nos movemos
-        entre el código, la estrategia y los datos para que tú puedas centrarte
-        en lo que mejor sabes hacer: gestionar tu negocio. No somos un proveedor
-        externo al uso, trabajamos como tu partner digital, involucrándonos en
-        cada proyecto para que los resultados sean reales y sostenibles.
-      </p>
-      <p style={bodyText}>
-        Desde el desarrollo de una plataforma robusta hasta la integración de
-        inteligencia artificial, en Salyo aportamos claridad técnica y ejecución
-        precisa en cada etapa del camino.
-      </p>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          width: '100%',
+          flex: 1,
+          minHeight: 0,
+        }}
+      >
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingRight: 24,
+          }}
+        >
+          <p
+            style={{
+              fontSize: '96px',
+              fontWeight: 300,
+              fontFamily: 'var(--font-geist)',
+              color: 'black',
+              paddingBottom: '4px',
+              margin: 0,
+            }}
+          >
+            Salyo
+          </p>
+        </div>
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingLeft: 24,
+            paddingRight: 56,
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 12,
+              maxWidth: '100%',
+              width: '100%',
+            }}
+          >
+            <p style={{ ...bodyText, fontSize: '30px', fontWeight: 500, marginBottom: 24 }}>
+              En Salyo, ayudamos a empresas y emprendedores a construir su
+              presencia digital con criterio y{'\u00a0'}tecnología.
+            </p>
+            <p style={{ ...bodyText, fontSize: '17px' }}>
+              Somos un estudio enfocado en crear soluciones que funcionan. Nos
+              movemos entre el código, la estrategia y los datos para que tú
+              puedas centrarte en lo que mejor sabes hacer: gestionar tu
+              negocio. No somos un proveedor externo al uso, trabajamos como tu
+              partner digital, involucrándonos en cada proyecto para que los
+              resultados sean reales y sostenibles.
+            </p>
+            <p style={{ ...bodyText, fontSize: '17px' }}>
+              Desde el desarrollo de una plataforma robusta hasta la integración
+              de inteligencia artificial, en Salyo aportamos claridad técnica y
+              ejecución precisa en cada etapa del camino.
+            </p>
+          </div>
+        </div>
+      </div>
     </ContentSlide>
     <ContentSlide pageNumber={3}>
-      <h2 style={sectionTitle}>Nuestros Principios</h2>
-      <p style={bulletLabel}>AI Proof</p>
-      <p style={subBullet}>
-        All stays in code, that is easy to read for AI. Code AI is well trained
-        on.
-      </p>
-      <p style={bulletLabel}>Escalabilidad</p>
-      <p style={subBullet}>Proyectos sin límites.</p>
-      <p style={bulletLabel}>Customatización</p>
-      <p style={subBullet}>Nada de plantillas o restricciones.</p>
-      <p style={bulletLabel}>Tech focused</p>
-      <p style={subBullet}>
-        We want to remain original, we don't design, we avoid patterns. We stay
-        fresh.
-      </p>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          width: '100%',
+          flex: 1,
+          minHeight: 0,
+        }}
+      >
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingRight: 24,
+          }}
+        >
+          <p
+            style={{
+              fontSize: '96px',
+              fontWeight: 300,
+              fontFamily: 'var(--font-geist)',
+              color: 'black',
+              paddingBottom: '4px',
+              margin: 0,
+            }}
+          >
+            Principios
+          </p>
+        </div>
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingLeft: 24,
+            paddingRight: 56,
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 12,
+              maxWidth: '100%',
+              width: '100%',
+            }}
+          >
+            <p
+              style={{
+                ...bodyText,
+                fontSize: '30px',
+                fontWeight: 500,
+                margin: 0,
+                marginBottom: 24,
+              }}
+            >
+              Nuestros principios se basan en la claridad técnica, la libertad
+              creativa y la preparación para el futuro.
+            </p>
+            <p style={{ ...bodyText, fontSize: '17px' }}>
+              En Salyo, aplicamos una filosofía{' '}
+              <strong style={{ fontWeight: 600 }}>AI Proof</strong>, escribiendo
+              código limpio y estandarizado que facilita la integración y el
+              entrenamiento de modelos de inteligencia artificial. Apostamos por
+              la <strong style={{ fontWeight: 600 }}>escalabilidad real</strong>
+              , desarrollando arquitecturas sólidas que permiten que tus
+              proyectos crezcan sin encontrar techos técnicos.
+            </p>
+            <p style={{ ...bodyText, fontSize: '17px' }}>
+              Nos alejamos de las soluciones genéricas mediante una{' '}
+              <strong style={{ fontWeight: 600 }}>personalización total</strong>
+              ; no dependemos de plantillas ni aceptamos restricciones
+              preestablecidas que limiten tu visión. Somos un equipo{' '}
+              <strong style={{ fontWeight: 600 }}>Tech focused</strong>:
+              centramos nuestra actividad exclusivamente en el desarrollo
+              técnico; este enfoque nos permite mantener la agilidad y el
+              frescor necesarios para entregar resultados de máxima calidad.
+            </p>
+          </div>
+        </div>
+      </div>
     </ContentSlide>
     <ContentSlide pageNumber={4}>
-      <h2 style={sectionTitle}>Servicios</h2>
-      <p style={bullet}>Desarrollo Web (Design collaborators)</p>
-      <p style={bullet}>SEO</p>
-      <p style={bullet}>Consultoría Digital</p>
-      <p style={bullet}>AI Partner</p>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          width: '100%',
+          flex: 1,
+          minHeight: 0,
+        }}
+      >
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingRight: 24,
+          }}
+        >
+          <p
+            style={{
+              fontSize: '96px',
+              fontWeight: 300,
+              fontFamily: 'var(--font-geist)',
+              color: 'black',
+              paddingBottom: '4px',
+              margin: 0,
+            }}
+          >
+            Servicios
+          </p>
+        </div>
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingLeft: 24,
+            paddingRight: 56,
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 16,
+              width: '100%',
+              maxWidth: 560,
+            }}
+          >
+            {[
+              {
+                num: 1,
+                title: 'Web Development',
+                description:
+                  'Construimos sitios y aplicaciones rápidas, seguras y fáciles de gestionar.',
+              },
+              {
+                num: 2,
+                title: 'SEO',
+                description:
+                  'Optimizamos tu estructura para que tus clientes te encuentren donde importa.',
+              },
+              {
+                num: 3,
+                title: 'Digital Consultancy',
+                description:
+                  'Te asesoramos sobre qué herramientas y caminos tomar para optimizar tus recursos.',
+              },
+              {
+                num: 4,
+                title: 'AI Partner',
+                description:
+                  'Implementamos soluciones de IA prácticas que ahorran tiempo y mejoran tus procesos.',
+              },
+            ].map(({ num, title, description }) => (
+              <div
+                key={num}
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'stretch',
+                  gap: 12,
+                }}
+              >
+                <div
+                  style={{
+                    width: 100,
+                    minWidth: 100,
+                    alignSelf: 'stretch',
+                    border: '1px solid black',
+                    borderRadius: 8,
+                    background: 'transparent',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-geist)',
+                      fontSize: '40px',
+                      fontWeight: 600,
+                      color: 'black',
+                    }}
+                  >
+                    {String(num).padStart(2, '0')}
+                  </span>
+                </div>
+                <div
+                  style={{
+                    flex: 1,
+                    minHeight: 80,
+                    alignSelf: 'stretch',
+                    border: '1px solid black',
+                    borderRadius: 8,
+                    background: 'transparent',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'flex-start',
+                    padding: '12px 16px',
+                  }}
+                >
+                  <span
+                    style={{
+                      ...bodyText,
+                      margin: 0,
+                      fontSize: '17px',
+                      lineHeight: 1.4,
+                      whiteSpace: 'normal',
+                    }}
+                  >
+                    <strong style={{ fontWeight: 600 }}>{title}</strong>. {description}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </ContentSlide>
     <ContentSlide pageNumber={5}>
-      <h2 style={sectionTitle}>Colaboradores</h2>
-      <p style={bulletLabel}>How we work</p>
-      <p style={subBullet}>With designer companies.</p>
-      <p style={bodyText}>
-        Materia, Sauras Garriga, Vetado, Cortto, Atipus, Bualié Studio
-      </p>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '100%',
+          flex: 1,
+          minHeight: 0,
+          gap: 28,
+        }}
+      >
+        {/* Bloque arriba de Equipo */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            width: '100%',
+            flex: '0 0 auto',
+          }}
+        >
+          <div style={{ flex: 1 }} />
+          <div
+            style={{
+              flex: 1,
+              paddingLeft: 24,
+              paddingRight: 56,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 12,
+              minWidth: 0,
+            }}
+          >
+            <p style={{ ...bodyText, fontSize: '26px', fontWeight: 500, margin: 0 }}> </p>
+            <p style={{ ...bodyText, fontSize: '17px', margin: 0 }}> </p>
+          </div>
+        </div>
+        {/* Equipo */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            width: '100%',
+            flex: 1,
+            minHeight: 0,
+          }}
+        >
+          <div
+            style={{
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              paddingRight: 24,
+            }}
+          >
+            <p
+              style={{
+                fontSize: '96px',
+                fontWeight: 300,
+                fontFamily: 'var(--font-geist)',
+                color: 'black',
+                paddingBottom: '4px',
+                margin: 0,
+              }}
+            >
+              Equipo
+            </p>
+          </div>
+          <div
+            style={{
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              paddingLeft: 24,
+              paddingRight: 56,
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 12,
+                maxWidth: '100%',
+                width: '100%',
+              }}
+            >
+              <p style={{ ...bodyText, fontSize: '17px', lineHeight: 1.5, margin: 0 }}>
+                <strong style={{ fontWeight: 600 }}>CEO Alan Douglas. Web Developer and Project Manager.</strong>{' '}
+                Como líder de Salyo, Alan coordina la arquitectura técnica y la
+                gestión de proyectos, asegurando que cada línea de código cumpla
+                con los estándares de calidad del estudio. Su enfoque combina la
+                precisión del desarrollo con una visión estratégica orientada a la
+                entrega de productos digitales sólidos y eficientes.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* Partners */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            width: '100%',
+            flex: 1,
+            minHeight: 0,
+          }}
+        >
+          <div
+            style={{
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              paddingRight: 24,
+            }}
+          >
+            <p
+              style={{
+                fontSize: '96px',
+                fontWeight: 300,
+                fontFamily: 'var(--font-geist)',
+                color: 'black',
+                paddingBottom: '4px',
+                margin: 0,
+              }}
+            >
+              Partners
+            </p>
+          </div>
+          <div
+            style={{
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              paddingLeft: 24,
+              paddingRight: 56,
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 12,
+                maxWidth: '100%',
+                width: '100%',
+              }}
+            >
+              <p style={{ ...bodyText, fontSize: '17px', lineHeight: 1.5, margin: 0 }}>
+                <strong style={{ fontWeight: 600 }}>
+                  Materia, Sauras Garriga, Vetado, Cortto, Atipus, Bualié Studio.
+                </strong>
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* Bloque abajo de Partners */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            width: '100%',
+            flex: '0 0 auto',
+          }}
+        >
+          <div style={{ flex: 1 }} />
+          <div
+            style={{
+              flex: 1,
+              paddingLeft: 24,
+              paddingRight: 56,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 12,
+              minWidth: 0,
+            }}
+          >
+            <p style={{ ...bodyText, fontSize: '26px', fontWeight: 500, margin: 0 }}> </p>
+            <p style={{ ...bodyText, fontSize: '17px', margin: 0 }}> </p>
+          </div>
+        </div>
+      </div>
     </ContentSlide>
     <SlideBase>
       <div
@@ -225,11 +658,12 @@ const Presentation = () => (
         <ProjectGrid images={PROJECT_IMAGES_TOP} fade="down" />
         <p
           style={{
-            fontSize: '82px',
+            fontSize: '96px',
             fontWeight: '300',
             fontFamily: 'var(--font-geist)',
             color: 'black',
             margin: 0,
+            paddingBottom: '4px',
           }}
         >
           Proyectos
@@ -285,9 +719,9 @@ const Presentation = () => (
 
 createRoot(document.getElementById('app')!).render(<Presentation />)
 
-// Content slide layout and typography
+// Content slide layout and typography (aligned with ProjectSlide / Brutus)
 const contentWrap = {
-  padding: '80px 56px 72px',
+  padding: '60px 48px 72px',
   boxSizing: 'border-box' as const,
   width: '100%',
   height: '100%',
@@ -295,37 +729,45 @@ const contentWrap = {
   flexDirection: 'column' as const,
   alignItems: 'flex-start',
   justifyContent: 'flex-start',
+  gap: 24,
 }
 const sectionTitle = {
-  fontSize: '32px',
+  fontSize: '48px',
+  fontWeight: 600 as const,
+  fontFamily: 'var(--font-geist)',
+  color: 'black',
+  margin: 0,
+}
+const bodyText = {
+  fontSize: '18px',
   fontWeight: 400 as const,
   fontFamily: 'var(--font-roboto)',
   color: 'black',
-  margin: '0 0 24px 0',
-}
-const bodyText = {
-  fontSize: '20px',
-  fontWeight: 300 as const,
-  fontFamily: 'var(--font-roboto)',
-  color: 'black',
-  margin: '0 0 12px 0',
+  margin: 0,
   lineHeight: 1.5,
 }
 const bullet = {
-  ...bodyText,
-  margin: '0 0 8px 0',
-}
-const subBullet = {
-  ...bodyText,
   fontSize: '18px',
-  margin: '0 0 8px 24px',
-}
-const bulletLabel = {
-  fontSize: '18px',
-  fontWeight: 300 as const,
+  fontWeight: 400 as const,
   fontFamily: 'var(--font-roboto)',
   color: 'black',
-  margin: '0 0 4px 0',
+  margin: 0,
+}
+const subBullet = {
+  fontSize: '18px',
+  fontWeight: 400 as const,
+  fontFamily: 'var(--font-roboto)',
+  color: 'black',
+  margin: 0,
+}
+const bulletLabel = {
+  fontSize: '14px',
+  fontWeight: 600 as const,
+  fontFamily: 'var(--font-roboto)',
+  color: 'black',
+  margin: 0,
+  textTransform: 'uppercase' as const,
+  letterSpacing: '0.05em',
 }
 const ContentSlide = ({
   children,
@@ -499,7 +941,7 @@ const ProjectSlide = ({
         <p
           style={{
             fontSize: '48px',
-            fontWeight: '600',
+            fontWeight: 300,
             fontFamily: 'var(--font-geist)',
             color: 'black',
             margin: 0,
@@ -549,8 +991,8 @@ const ProjectSlide = ({
                 style={{
                   fontSize: '18px',
                   fontWeight: '400',
-                  fontFamily: 'var(--font-geist)',
-                  color: 'var(--color-text)',
+                  fontFamily: 'var(--font-roboto)',
+                  color: 'black',
                   margin: 0,
                 }}
               >
@@ -565,8 +1007,8 @@ const ProjectSlide = ({
               style={{
                 fontSize: '14px',
                 fontWeight: '600',
-                fontFamily: 'var(--font-geist)',
-                color: 'var(--color-text)',
+                fontFamily: 'var(--font-roboto)',
+                color: 'black',
                 margin: 0,
                 textTransform: 'uppercase',
                 letterSpacing: '0.05em',
@@ -580,8 +1022,8 @@ const ProjectSlide = ({
                 style={{
                   fontSize: '18px',
                   fontWeight: '400',
-                  fontFamily: 'var(--font-geist)',
-                  color: 'var(--color-text)',
+                  fontFamily: 'var(--font-roboto)',
+                  color: 'black',
                   margin: 0,
                 }}
               >
