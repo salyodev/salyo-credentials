@@ -113,10 +113,11 @@ const Presentation = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
           style={{
-            fontSize: '128px',
+            fontSize: '96px',
             fontWeight: '300',
             fontFamily: 'var(--font-geist)',
             color: 'black',
+            paddingBottom: '4px',
           }}
         >
           Salyo
@@ -126,60 +127,87 @@ const Presentation = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
           style={{
-            fontSize: '24px',
+            fontSize: '20px',
             fontWeight: '400',
             fontFamily: 'var(--font-geist)',
             color: 'var(--color-text)',
             textTransform: 'uppercase',
+            letterSpacing: '1.5px',
           }}
         >
           Your digital partner
         </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.5 }}
+          style={{
+            display: 'flex',
+            gap: 10,
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            fontSize: '13px',
+            fontWeight: '400',
+            fontFamily: 'var(--font-geist)',
+            color: 'var(--color-text)',
+            marginTop: 24,
+          }}
+        >
+          Web development<span>·</span>SEO<span>·</span>Digital consultancy
+          <span>·</span>AI partner
+        </motion.p>
       </div>
     </SlideBase>
-    <ContentSlide title="SALYO" pageNumber={2}>
-      <p style={bulletLabel}>What we do</p>
-      <p style={subBullet}>—</p>
-      <p style={bulletLabel}>Why we do it</p>
-      <p style={subBullet}>—</p>
-      <p style={bulletLabel}>Goals</p>
-      <p style={subBullet}>—</p>
+    <ContentSlide pageNumber={2}>
+      <h2 style={sectionTitle}>Sobre Nosotros</h2>
+      <p style={bodyText}>
+        En Salyo, ayudamos a empresas y emprendedores a construir su presencia
+        digital con criterio y tecnología.
+      </p>
+      <p style={bodyText}>
+        Somos un estudio enfocado en crear soluciones que funcionan. Nos movemos
+        entre el código, la estrategia y los datos para que tú puedas centrarte
+        en lo que mejor sabes hacer: gestionar tu negocio. No somos un proveedor
+        externo al uso, trabajamos como tu partner digital, involucrándonos en
+        cada proyecto para que los resultados sean reales y sostenibles.
+      </p>
+      <p style={bodyText}>
+        Desde el desarrollo de una plataforma robusta hasta la integración de
+        inteligencia artificial, en Salyo aportamos claridad técnica y ejecución
+        precisa en cada etapa del camino.
+      </p>
     </ContentSlide>
-    <ContentSlide title="ABOUT US" pageNumber={3}>
-      <p style={bodyText}>Who we are, what we do, why.</p>
-      <p style={{ ...bodyText, marginTop: 16, fontWeight: 600, color: 'black' }}>“Your digital partner”</p>
-    </ContentSlide>
-    <ContentSlide title="ABOUT US — PRINCIPIOS (Para proyectos)" pageNumber={4}>
+    <ContentSlide pageNumber={3}>
+      <h2 style={sectionTitle}>Nuestros Principios</h2>
       <p style={bulletLabel}>AI Proof</p>
-      <p style={subBullet}>All stays in code, that is easy to read for AI. Code AI is well trained on.</p>
+      <p style={subBullet}>
+        All stays in code, that is easy to read for AI. Code AI is well trained
+        on.
+      </p>
       <p style={bulletLabel}>Escalabilidad</p>
       <p style={subBullet}>Proyectos sin límites.</p>
       <p style={bulletLabel}>Customatización</p>
       <p style={subBullet}>Nada de plantillas o restricciones.</p>
       <p style={bulletLabel}>Tech focused</p>
-      <p style={subBullet}>We want to remain original, we don't design, we avoid patterns. We stay fresh.</p>
+      <p style={subBullet}>
+        We want to remain original, we don't design, we avoid patterns. We stay
+        fresh.
+      </p>
     </ContentSlide>
-    <ContentSlide title="DESIGN COLLABS" pageNumber={5}>
-      <p style={bulletLabel}>How we work</p>
-      <p style={subBullet}>With designer companies.</p>
-      <p style={bodyText}>Materia, Sauras Garriga, Vetado, Cortto, Atipus, Bualié Studio</p>
-    </ContentSlide>
-    <ContentSlide title="SERVICIOS" pageNumber={6}>
+    <ContentSlide pageNumber={4}>
+      <h2 style={sectionTitle}>Servicios</h2>
       <p style={bullet}>Desarrollo Web (Design collaborators)</p>
       <p style={bullet}>SEO</p>
       <p style={bullet}>Consultoría Digital</p>
       <p style={bullet}>AI Partner</p>
     </ContentSlide>
-    <ContentSlide title="OUR TECH" pageNumber={7}>
-      <p style={bulletLabel}>Stack</p>
-      <p style={subBullet}>Host + Framework + CMS + Analytics</p>
-      <p style={bulletLabel}>Infrastructure</p>
-      <p style={subBullet}>Scalable, Secure, Cheap</p>
-    </ContentSlide>
-    <ContentSlide title="TEAM" pageNumber={8}>
-      <p style={bulletLabel}>Alan (CV)</p>
-      <p style={subBullet}>Description</p>
-      <p style={subBullet}>Chronological career</p>
+    <ContentSlide pageNumber={5}>
+      <h2 style={sectionTitle}>Colaboradores</h2>
+      <p style={bulletLabel}>How we work</p>
+      <p style={subBullet}>With designer companies.</p>
+      <p style={bodyText}>
+        Materia, Sauras Garriga, Vetado, Cortto, Atipus, Bualié Studio
+      </p>
     </ContentSlide>
     <SlideBase>
       <div
@@ -208,13 +236,49 @@ const Presentation = () => (
         </p>
         <ProjectGrid images={PROJECT_IMAGES_BOTTOM} fade="up" />
       </div>
-      <Footer pageNumber={9} />
     </SlideBase>
     {PROJECTS.map((project, i) => (
-      <ProjectSlide key={project.name} pageNumber={10 + i} {...project} />
+      <ProjectSlide key={project.name} pageNumber={7 + i} {...project} />
     ))}
     <SlideBase>
-      <Footer pageNumber={10 + PROJECTS.length} />
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 2,
+        }}
+      >
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          style={{
+            fontSize: '96px',
+            fontWeight: '300',
+            fontFamily: 'var(--font-geist)',
+            color: 'black',
+            paddingBottom: '4px',
+          }}
+        >
+          Salyo
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
+          style={{
+            fontSize: '20px',
+            fontWeight: '400',
+            fontFamily: 'var(--font-geist)',
+            color: 'var(--color-text)',
+            textTransform: 'uppercase',
+            letterSpacing: '1.5px',
+          }}
+        >
+          Your digital partner
+        </motion.p>
+      </div>
     </SlideBase>
   </Deck>
 )
@@ -223,7 +287,7 @@ createRoot(document.getElementById('app')!).render(<Presentation />)
 
 // Content slide layout and typography
 const contentWrap = {
-  padding: '48px 56px 80px',
+  padding: '80px 56px 72px',
   boxSizing: 'border-box' as const,
   width: '100%',
   height: '100%',
@@ -234,16 +298,16 @@ const contentWrap = {
 }
 const sectionTitle = {
   fontSize: '32px',
-  fontWeight: 600 as const,
-  fontFamily: 'var(--font-geist)',
+  fontWeight: 400 as const,
+  fontFamily: 'var(--font-roboto)',
   color: 'black',
   margin: '0 0 24px 0',
 }
 const bodyText = {
   fontSize: '20px',
-  fontWeight: 400 as const,
-  fontFamily: 'var(--font-geist)',
-  color: 'var(--color-text)',
+  fontWeight: 300 as const,
+  fontFamily: 'var(--font-roboto)',
+  color: 'black',
   margin: '0 0 12px 0',
   lineHeight: 1.5,
 }
@@ -258,28 +322,62 @@ const subBullet = {
 }
 const bulletLabel = {
   fontSize: '18px',
-  fontWeight: 600 as const,
-  fontFamily: 'var(--font-geist)',
+  fontWeight: 300 as const,
+  fontFamily: 'var(--font-roboto)',
   color: 'black',
   margin: '0 0 4px 0',
 }
-
 const ContentSlide = ({
-  title,
   children,
   pageNumber,
 }: {
-  title: string
   children: React.ReactNode
   pageNumber: number
 }) => (
   <SlideBase>
-    <div style={contentWrap}>
-      <h2 style={sectionTitle}>{title}</h2>
-      {children}
-    </div>
+    <Header />
+    <div style={contentWrap}>{children}</div>
     <Footer pageNumber={pageNumber} />
   </SlideBase>
+)
+
+const Header = () => (
+  <div
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '24px 36px 0 36px',
+      boxSizing: 'border-box',
+      fontFamily: 'var(--font-geist)',
+      color: 'black',
+      zIndex: 1,
+    }}
+  >
+    <span
+      style={{
+        fontSize: '24px',
+        fontWeight: '300',
+      }}
+    >
+      Salyo
+    </span>
+    <span
+      style={{
+        fontSize: '12px',
+        fontWeight: '400',
+        color: 'var(--color-text)',
+        textTransform: 'uppercase',
+        letterSpacing: '1.5px',
+      }}
+    >
+      Your digital partner
+    </span>
+  </div>
 )
 
 const Footer = ({ pageNumber }: { pageNumber: number }) => (
@@ -295,20 +393,29 @@ const Footer = ({ pageNumber }: { pageNumber: number }) => (
       padding: '0 36px 24px 36px',
       boxSizing: 'border-box',
       fontFamily: 'var(--font-geist)',
-      fontSize: '14px',
-      color: 'var(--color-text)',
     }}
   >
-    <span>{EMAIL}</span>
-    <span>{pageNumber}</span>
     <span
       style={{
-        fontSize: '20px',
-        fontWeight: '600',
-        color: 'black',
+        fontSize: '12px',
+        fontWeight: '400',
+        color: 'var(--color-text)',
+        textTransform: 'uppercase',
+        letterSpacing: '1.5px',
       }}
     >
-      {YEAR}
+      {EMAIL}
+    </span>
+    <span
+      style={{
+        fontSize: '12px',
+        fontWeight: '400',
+        color: 'var(--color-text)',
+        textTransform: 'uppercase',
+        letterSpacing: '1.5px',
+      }}
+    >
+      {pageNumber}
     </span>
   </div>
 )
@@ -368,6 +475,7 @@ const ProjectSlide = ({
   url?: string
 }) => (
   <SlideBase>
+    <Header />
     <div
       style={{
         display: 'flex',
